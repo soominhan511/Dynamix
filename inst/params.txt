@@ -1,0 +1,10 @@
+window_size  51e4
+down_sample_ratio	0.01
+smoothing_factor    150
+var_prior_ndlm  1e4
+threshold_rowsums_em_p   0.5
+peak_prominence 0.1
+threshold_mean_to_peak  0.1
+max_stripe_width    3e5
+threshold_baseline_p    0.95
+threshold_p_value_stripe    5e-3

@@ -1,0 +1,12 @@
+Package: Dynamix
+Type: Package
+Title: Chromatin Stripe Calling Pipeline using a Bayesian NDLM
+Version: 0.1.0
+Author: Soomin Han
+Maintainer: Soomin Han <hsm0511@snu.ac.kr>
+Description: Dynamix identifies chromatin stripes from Hi-C contact files by applying a Bayesian Dynamic Linear Model (NDLM) to signal probability matrices. The signal probability matrices are constructed using a zero-inflated negative binomial and negative binomial (ZINB+NB) mixture expectation-maximization (EM) algorithm.
+License: GPL-3
+LazyData: true
+Encoding: UTF-8
+Imports: dplyr, tibble, tidyr, reticulate, data.table, BiocGenerics, Biostrings, GenomicRanges, GenomeInfoDb, IRanges, rtracklayer, BSgenome, rlang, methods, readr, MASS, splines
+Config/roxygen2/version: 8.1.1

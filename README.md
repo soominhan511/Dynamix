@@ -116,4 +116,8 @@ Call_Stripes(
 ```
 
 ### 2. Modifying Other Parameters (Except Resolution)
-To modify other parameters, open and update the values in `My_R_Library_Path/Dynamix/params.txt`, then save the file.
+To modify parameters other than resolution, open and edit the configuration file located at your package installation path:
+
+- `My_R_Library_Path/Dynamix/params.txt`
+
+Modify the desired values and save the file before running the analysis.

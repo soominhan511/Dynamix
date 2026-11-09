@@ -7,6 +7,7 @@
 ## Installation
 
 To install Dynamix from GitHub, you first need to install the required Bioconductor dependencies for extracting GC content and mappability scores from restriction enzyme cutsites. 
+
 Please run the following code in your R console:
 
 ```R

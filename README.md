@@ -116,4 +116,4 @@ Call_Stripes(
 ```
 
 ### 2. Modifying Other Parameters (Except Resolution)
-To modify other parameters, open and update the values in `Dynamix_package_dir/params.txt`, then save the file.
+To modify other parameters, open and update the values in `My_R_Library_Path/Dynamix/params.txt`, then save the file.

@@ -59,10 +59,52 @@ Call_Stripes(
 
 ---
 
-## Output
+## Output File
 
-Once execution is complete, you can find the chromatin stripes in `MyDir/chr12_stripes.bedpe`.
+#### 1. Stripe File
+- **File Name:** `MyDir/chr12_stripes.bedpe`
+- **Description:** This file includes all pixel interactions (i,j) located inside identified chromatin stripes.
 
+| chr | start1 | end1 | start2 | end2 | stripe_number | stripe_width_range | stripe_length_range | stripe_width | stripe_length | p_value_stripe | direction | count | mu | signal_p | p_value_NB_MIX | pass |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| chr12 | 520001 | 530000.0 | 660001 | 670000.0 | 1 | 520000-610000 | 660000-2000000 | 90000 | 1340000 | 7.10e-05 | 5_prime | 35 | 127.33 | 0.0849 | 0.8918 | True |
+| chr12 | 520001 | 530000.0 | 670001 | 680000.0 | 1 | 520000-610000 | 660000-2000000 | 90000 | 1340000 | 7.10e-05 | 5_prime | 33 | 122.40 | 0.0830 | 0.8951 | True |
+| chr12 | 520001 | 530000.0 | 680001 | 690000.0 | 1 | 520000-610000 | 660000-2000000 | 90000 | 1340000 | 7.10e-05 | 5_prime | 23 | 111.53 | 0.0596 | 0.9325 | True |
+| chr12 | 520001 | 530000.0 | 690001 | 700000.0 | 1 | 520000-610000 | 660000-2000000 | 90000 | 1340000 | 7.10e-05 | 5_prime | 27 | 107.94 | 0.0759 | 0.9070 | True |
+| chr12 | 520001 | 530000.0 | 700001 | 710000.0 | 1 | 520000-610000 | 660000-2000000 | 90000 | 1340000 | 7.10e-05 | 5_prime | 26 | 95.97 | 0.0837 | 0.8940 | True |
+| chr12 | 520001 | 530000.0 | 710001 | 720000.0 | 1 | 520000-610000 | 660000-2000000 | 90000 | 1340000 | 7.10e-05 | 5_prime | 31 | 93.61 | 0.1055 | 0.8544 | True |
+| chr12 | 520001 | 530000.0 | 720001 | 730000.0 | 1 | 520000-610000 | 660000-2000000 | 90000 | 1340000 | 7.10e-05 | 5_prime | 37 | 91.21 | 0.1317 | 0.8023 | True |
+| chr12 | 520001 | 530000.0 | 730001 | 740000.0 | 1 | 520000-610000 | 660000-2000000 | 90000 | 1340000 | 7.10e-05 | 5_prime | 43 | 85.84 | 0.1638 | 0.7335 | True |
+| chr12 | 520001 | 530000.0 | 740001 | 750000.0 | 1 | 520000-610000 | 660000-2000000 | 90000 | 1340000 | 7.10e-05 | 5_prime | 25 | 82.81 | 0.0951 | 0.8738 | True |
+
+**Column Description:**
+- `chr`: Chromosome name
+- `start1`: i * resolution (bp)
+- `end1`: (i+1) * resolution (bp)
+- `start2`: j * resolution (bp)
+- `end2`: (j+1) * resolution (bp)
+- `stripe_number`: Unique identifier for a stripe (all interactions within the same stripe share this value).
+- `stripe_width_range`: Stripe width range (anchor)
+- `stripe_length_range`: Stripe length range
+- `stripe_width`: Stripe width
+- `stripe_length`: Stripe length
+- `p_value_stripe`: P value for stripe (all interactions within a stripe share this value)
+- `direction`: `5_prime` for 5' stripes, `3_prime` for 3' stripes.
+- `count`: Raw Hi-C contact count for interaction (i,j)
+- `mu`: Expected count of interaction (i,j)
+- `signal_p`: Signal probability of interaction (i,j)
+- `p_value_NB_MIX`: P value derived from the ZINB-NB mixture model
+- `pass`: `True` if the stripe meets the filtering threshold (all interactions within a stripe share this value).
+
+---
+
+#### 2. Stat Files
+- **2-1. File Name:** `MyDir/chr12_stats/chr12_pair_features_stats.csv`
+  - **Information:** Contains the signal probabilities for all pairwise interactions (i,j) across chromosome 12.
+- **2-2. File Name:** `MyDir/chr12_stats/ZINB_NB_mix_EM_coefficients.csv`
+  - **Information:** Contains converged parameters from the ZINB and NB mixture models, including coefficient estimates, associated p-values, and AIC values.
+- **2-3. File Name:** `MyDir/chr12_stats/chr12_rowsum_smoothed_ndlm_5_prime.png`
+  - **Information:** Visualizes the Bayesian Normal Dynamic Linear Model (NDLM) smoothing means of 1D signal probability sums across genomic indices.
 ---
 
 ## Parameter Information and Default Values

@@ -1,6 +1,12 @@
 # Dynamix
 
 > Chromatin Stripe Calling Pipeline using a Bayesian NDLM
+> 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24081270.svg)](https://doi.org/10.5281/zenodo.24081270)
+
+Dynamix identifies chromatin stripes from Hi-C contact files by applying a Bayesian Normal Dynamic Linear Model (NDLM) to signal probability matrices. The signal probability matrices are constructed using a zero-inflated negative binomial and negative binomial (ZINB+NB) mixture expectation-maximization (EM) algorithm.
+
+> Soomin Han. (2026). *Dynamix identifies accurate chromatin stripes by Bayesian Normal Dynamic Linear Model on Hi-C signal probabilities*. Zenodo. [https://doi.org/10.5281/zenodo.24081270](https://doi.org/10.5281/zenodo.24081270)
 
 ---
 
@@ -120,7 +126,7 @@ If you execute the script as shown above, the stripes are obtained automatically
    - Selected samples are included to converge ZINB+NB mixture EM model.
 4. **smoothing_factor** `150`
    - The ratio of observational variance to system variance in the Bayesian NDLM.
-   - Larger values yield a smoother NDLM smoothing mean distribution of the 1D signal probability sum (denoted as `sm` in Soomin Han).
+   - Larger values yield a smoother NDLM smoothing mean distribution of the 1D signal probability sum (denoted as `sm` in [Han, 2026](https://doi.org/10.5281/zenodo.24081270)).
 5. **var_prior_ndlm** `1e4`
    - The prior variance for the initial state of the signal probability sum in the Bayesian NDLM.
 6. **threshold_rowsums_em_p** `0.5`
@@ -129,11 +135,11 @@ If you execute the script as shown above, the stripes are obtained automatically
    - The peak prominence parameter for finding local maxima in the NDLM smoothing distribution of 1D signal probability sums.
 8. **threshold_mean_to_peak** `0.1`
    - The ratio of (probability mass from the NDLM smoothing mean to the cut value) to (probability mass from the NDLM smoothing mean to the 1D signal probability sum).
-   - The `cut_value` is used to determine the stripe width (denoted as `ε` in Soomin Han).
+   - The `cut_value` is used to determine the stripe width (denoted as `ε` in [Han, 2026](https://doi.org/10.5281/zenodo.24081270)).
 9. **max_stripe_width** `3e5`
    - The maximum stripe width to call.
 10. **threshold_baseline_p** `0.95`
-    - The baseline score to subtract from the score vector to determine stripe length (denoted as `δ` in Soomin Han).
+    - The baseline score to subtract from the score vector to determine stripe length (denoted as `δ` in [Han, 2026](https://doi.org/10.5281/zenodo.24081270)).
 11. **threshold_p_value_stripe** `5e-3`
     - The threshold p-value to filter passed stripes.
     - The `pass` column (e.g., in `chr12_stripes.bedpe`) becomes `TRUE` if the following conditions are met:

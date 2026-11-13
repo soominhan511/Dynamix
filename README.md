@@ -1,6 +1,6 @@
 # Dynamix
 
-> Chromatin Stripe Calling Pipeline using a Bayesian Normaly Dynamic Linear Model (NDLM)
+> Chromatin Stripe Calling Pipeline using a Bayesian Normal Dynamic Linear Model (NDLM)
 > 
 > ![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24079246.svg)
 

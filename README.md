@@ -2,7 +2,7 @@
 
 > Chromatin Stripe Calling Pipeline using a Bayesian Normal Dynamic Linear Model (NDLM)
 > 
-> ![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24079246.svg)
+> [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24079246.svg)](https://doi.org/10.5281/zenodo.24079246)
 
 Dynamix identifies chromatin stripes from Hi-C contact files by applying a Bayesian Normal Dynamic Linear Model (NDLM) to signal probability matrices. The signal probability matrices are constructed using a zero-inflated negative binomial and negative binomial (ZINB+NB) mixture expectation-maximization (EM) algorithm.
 

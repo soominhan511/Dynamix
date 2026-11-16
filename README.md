@@ -7,7 +7,7 @@
 Dynamix identifies chromatin stripes from Hi-C contact files by applying a Bayesian Normal Dynamic Linear Model (NDLM) to signal probability matrices. The signal probability matrices are constructed using a zero-inflated negative binomial and negative binomial (ZINB+NB) mixture expectation-maximization (EM) algorithm.
 
 > Soomin Han. (2026). *Dynamix identifies accurate chromatin stripes by Bayesian Normal Dynamic Linear Model on Hi-C signal probabilities*.
-
+> [![DOI](https://img.shields.io/badge/DOI-10.21203%2Frs.3.rs--11721766%2Fv1-blue.svg)](https://doi.org/10.21203/rs.3.rs-11721766/v1)
 ---
 
 ## Installation

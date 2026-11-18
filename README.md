@@ -41,7 +41,7 @@ devtools::install_github("soominhan511/Dynamix")
 
 ## Data Preparation
 
-1. **Hi-C Data:** Prepare your `.hic` file.
+1. **Hi-C Data:** Prepare your `.hic` file. (e.g., [`4DNFI1UEG1HD.hic`](https://data.4dnucleome.org/files-processed/4DNFI1UEG1HD/))
 2. **Mappability File:** Download the mappability bigWig file (`wgEncodeCrgMapabilityAlign50mer.bigWig`) from the UCSC Genome Browser:
    * [UCSC Mappability Download Link](https://hgdownload.cse.ucsc.edu/goldenPath/hg19/encodeDCC/wgEncodeMapability/)
 
@@ -56,7 +56,7 @@ library(Dynamix)
 
 # Execute stripe calling
 Call_Stripes(
-    hic_file = 'MyDir/my_sample.hic', 
+    hic_file = 'MyDir/4DNFI1UEG1HD.hic', 
     wg_file = 'MyDir/wgEncodeCrgMapabilityAlign50mer.bigWig',
     output_path = 'MyDir/', 
     chr = 'chr12'

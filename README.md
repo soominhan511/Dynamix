@@ -155,7 +155,7 @@ To modify the resolution, include the `resolution` argument when calling the fun
 
 ```R
 Call_Stripes(
-    hic_file = 'MyDir/my_sample.hic', 
+    hic_file = 'MyDir/4DNFI1UEG1HD.hic', 
     wg_file = 'MyDir/wgEncodeCrgMapabilityAlign50mer.bigWig',
     output_path = 'MyDir/', 
     chr = 'chr12', 
